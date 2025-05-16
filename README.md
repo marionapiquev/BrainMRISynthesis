@@ -15,7 +15,6 @@ patients. Experiments on classification tasks demonstrate the effectiveness of
 the generated synthetic data for augmenting small, imbalanced datasets, ultimately improving the diagnostic performance of deep learning models in the
 context of Long COVID classification.
 
-![Generated Samples by our Medical Diffusion model](assets/mri_video.gif)
 <p align="center">
   <img src="assets/mri_video.gif" alt="Generated Samples by our Medical Diffusion model" width="400"/>
 </p>
