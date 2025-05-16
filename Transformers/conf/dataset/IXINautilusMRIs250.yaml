@@ -1,0 +1,10 @@
+name: IXINautilusMRIs250
+train:
+  class: ai4ha.data.images.MRIColDataset.MRIColDataset
+  params:
+    size: 256
+    data_root: /
+    datasets:
+      - NautilusMRI
+      - IXI
+    partition: train

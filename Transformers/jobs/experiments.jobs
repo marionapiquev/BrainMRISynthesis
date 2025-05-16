@@ -1,0 +1,2 @@
++model=train-Transformer +dataset=NautilusMRIs250 dataloader=batch1
++model=train-DiTDiffusion +dataset=NautilusMRIs250 dataloader=batch1

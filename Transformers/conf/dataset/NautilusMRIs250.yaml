@@ -1,0 +1,7 @@
+name: NautilusMRIs250
+train:
+  class: ai4ha.data.images.MRIDataset.MRIDataset
+  params:
+    size: 256
+    data_root: /NautilusMRI
+    dataset: train
