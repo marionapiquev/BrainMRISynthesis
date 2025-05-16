@@ -1,0 +1,29 @@
+exp_dir: /VQAutoencoder/
+base_dir_logs: /home/bsc/bsc152213/mrigen/VQAutoencoder/logs/
+pretrainedVQ: true
+local: false
+projectconf:
+  total_limit: 2
+accelerator:
+  gradient_accumulation_steps: 1
+  mixed_precision: 'no'
+  log_with: wandb
+samples:
+  samples_freq: 5
+  samples_num: 20
+  samples_gen: 50
+time: 12
+train:
+  num_epochs: 50
+  log_interval: 10
+  save_interval: 10
+  checkpoint_freq: 10
+  checkpoint_epoch_freq: 10
+  best_model: true
+
+defaults:
+  - dataloader: batch32
+  - optimizer: adamw-lr4
+  - loss: L2
+  - lr_scheduler: cosine-w100
+  - _self_

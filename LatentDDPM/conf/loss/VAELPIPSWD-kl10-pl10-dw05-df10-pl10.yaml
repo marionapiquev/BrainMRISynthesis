@@ -1,0 +1,11 @@
+loss: VAELPIPSWD
+class: ai4ha.Autoencoders.losses.latent_losses.VAELPIPSWDloss
+params:
+  params:
+    root: /home/bejar/code/misiones/ai4ha/
+    kl_w: 1.0
+    pixelloss_w: 1.0
+    discriminator_w: 0.5
+    discriminator_f: 1.0
+    disc_start: 2000
+    perceptual_w: 1.0

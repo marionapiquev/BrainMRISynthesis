@@ -1,0 +1,43 @@
+modeltype: VQAutoencoder
+modelname: LatentDDPM-vqvae-32-64-64-positional-labels-big
+imagekey: image
+data: /gpfs/projects/bsc70/bsc70642/Data/NautilusMRI/train
+vae:
+  im_channels: 1
+  down_channels: 
+   - 32
+   - 64
+   - 128
+  mid_channels:
+   - 128
+  down_sample:
+   - True
+   - True
+  attns: 
+   - False
+   - False
+  z_channels: 32
+  n_embed: 512
+unet:
+  sample_size: 64
+  in_channels: 32
+  out_channels: 32
+  layers_per_block: 3
+  block_out_channels: 
+    - 256
+    - 512
+    - 1024
+  down_block_types: 
+    - DownBlock2D 
+    - DownBlock2D 
+    - DownBlock2D 
+  up_block_types: 
+    - UpBlock2D 
+    - UpBlock2D 
+    - UpBlock2D
+scheduler:
+  num_train_timesteps: 1000
+  beta_schedule: linear
+  beta_start: 0.0015
+  beta_end: 0.0205
+pretraiendVQ_path: /home/bsc/bsc152213/mrigen/VQ-VAE/logs/VQVAE-32-64-64-positional/model/VAE-best-model-parameters-epoch.pt

@@ -1,0 +1,2 @@
+type: constant_with_warmup
+lr_warmup_steps: 10

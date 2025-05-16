@@ -1,0 +1,2 @@
+type: linear
+lr_warmup_steps: 0
