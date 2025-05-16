@@ -1,0 +1,3 @@
+#+evaluate=CondLatentDDPM +dataset=NautilusMRIs250 dataloader=batch8
+#+sample=CondLatentDDPM +dataset=NautilusMRIs250 dataloader=batch8
+#+model=CondLatentDDPM-VQVAE-1 +dataset=NautilusMRIs250 dataloader=batch8

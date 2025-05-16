@@ -1,0 +1,47 @@
+modeltype: LatentDDPM
+modelname: CondLatentDDPM-vqvae-32-64-64-positional-labels
+imagekey: image
+model_id: model-CondLatent-32
+testdata: /gpfs/projects/bsc70/bsc70642/Data/NautilusMRI/test
+traindata: /gpfs/projects/bsc70/bsc70642/Data/NautilusMRI/train
+generateddata: /gpfs/projects/bsc70/bsc152213/generated_data
+vae:
+  im_channels: 1
+  down_channels: 
+   - 32
+   - 64
+   - 128
+  mid_channels:
+   - 128
+  down_sample:
+   - True
+   - True
+  attns: 
+   - False
+   - False
+  z_channels: 32
+  n_embed: 512
+unet:
+  sample_size: 64
+  in_channels: 32
+  out_channels: 32
+  layers_per_block: 3
+  block_out_channels: 
+    - 256
+    - 512
+    - 1024
+  down_block_types: 
+    - DownBlock2D 
+    - DownBlock2D 
+    - DownBlock2D 
+  up_block_types: 
+    - UpBlock2D 
+    - UpBlock2D 
+    - UpBlock2D
+scheduler:
+  num_train_timesteps: 1000
+  beta_schedule: linear
+  beta_start: 0.0015
+  beta_end: 0.0205
+pretraiendVQ_path: /home/bsc/bsc152213/mrigen/VQAutoencoder/logs/VQVAE-32-64-64-positional/model/VAE-best-model-parameters-epoch.pt
+path_pipeline: /home/bsc/bsc152213/mrigen/LatentDDPM/logs/LatentDDPM-vqvae-32-64-64-positional-labels/model/DDPMpipeline-best-model/
