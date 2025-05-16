@@ -1,0 +1,1 @@
+#+model=VQVAE-1-64-64 +dataset=NautilusMRIs250 dataloader=batch8

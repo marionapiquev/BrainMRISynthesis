@@ -1,0 +1,23 @@
+modeltype: LatentDDPM
+modelname: VQVAE-8-64-64-positional
+imagekey: image
+data: /gpfs/projects/bsc70/bsc70642/Data/NautilusMRI/train
+vae:
+  im_channels: 1
+  down_channels: 
+   - 32
+   - 64
+   - 128
+  mid_channels:
+   - 128
+  down_sample:
+   - True
+   - True
+  attns: 
+   - False
+   - False
+  z_channels: 8
+  n_embed: 512
+params:
+  dim: 8
+  latent_size: 64
