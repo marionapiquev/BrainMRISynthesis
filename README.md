@@ -16,7 +16,9 @@ the generated synthetic data for augmenting small, imbalanced datasets, ultimate
 context of Long COVID classification.
 
 ![Generated Samples by our Medical Diffusion model](assets/mri_video.gif)
-
+<p align="center">
+  <img src="assets/mri_video.gif" alt="Generated Samples by our Medical Diffusion model" width="400"/>
+</p>
 
 ## Directories
 - `ai4ha`: Contains customized classes adapted from the *Diffusers* library. These are shared components used across all implemented approaches.
